@@ -1,52 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>aspen-toggle test</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+  <title>test-all test</title>
 
-    <link rel="import" href="../aspen-toggle.html">
-  </head>
-  <body>
+  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
+  <script src="../node_modules/mocha/mocha.js"></script>
+  <script src="../node_modules/chai/chai.js"></script>
+  <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <test-fixture id="BasicTestFixture">
-      <template>
-        <aspen-toggle></aspen-toggle>
-      </template>
-    </test-fixture>
+  <script type="module" src="./../aspen-toggle.js"></script>
+</head>
 
-    <test-fixture id="ChangedPropertyTestFixture">
-      <template>
-        <aspen-toggle prop1="new-prop1"></aspen-toggle>
-      </template>
-    </test-fixture>
+<body>
 
-    <script>
-      suite('aspen-toggle', () => {
 
-        test('instantiating the element with default properties works', () => {
-          const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'aspen-toggle');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello aspen-toggle!');
-        });
 
-        test('setting a property on the element works', () => {
-          // Create a test fixture
-          const element = fixture('ChangedPropertyTestFixture');
-          assert.equal(element.prop1, 'new-prop1');
-          const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
-        });
+  <test-fixture id="ChangedPropertyTestFixture">
+    <template>
+      <aspen-toggle prop1="new-prop"> </aspen-toggle>
+    </template>
+  </test-fixture>
+
+  <script type="module">
+    suite('aspen-toggle', () => {
+
+      test('setting a property on the element works', () => {
+        // Create a test fixture
+        const element = fixture('ChangedPropertyTestFixture');
+        assert.equal(element.prop1, 'new-prop');
+        const elementShadowRoot = element.shadowRoot;
 
       });
-    </script>
 
-  </body>
+    });
+  </script>
+
+</body>
+
 </html>
