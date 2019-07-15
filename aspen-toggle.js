@@ -2,6 +2,8 @@ import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
 import '@polymer/iron-icon/iron-icon.js';
 import './asp-icons/asp-icons.js';
 import { afterNextRender } from '@polymer/polymer/lib/utils/render-status.js';
+import '@polymer/iron-icon';
+import '@polymer/iron-icons'
 /**
  * `aspen-toggle` This component toggles between two  icons whenever the user taps on it.
  *
@@ -32,9 +34,9 @@ class AspenToggle extends PolymerElement {
   /**
    * String providing the tag name to register the element under.
    */
-  // static get is() {
-  //   return 'aspen-toggle';
-  // }
+  static get is() {
+    return 'aspen-toggle';
+  }
 
   /**
    * Object describing property-related metadata used by Polymer features
@@ -59,13 +61,13 @@ class AspenToggle extends PolymerElement {
       /** The icon to be displayed whenever the toggle is selected. */
       selectedIcon: {
         type: String,
-        value: 'aspen:star'
+        value: ''
       },
 
       /** The icon to be displayed whenever the toggle is deselected. */
       deselectedIcon: {
         type: String,
-        value: 'aspen:star-border'
+        value: ''
       }
     };
   }
