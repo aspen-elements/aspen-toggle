@@ -1,9 +1,11 @@
 import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
-import '@polymer/iron-icon/iron-icon.js';
-import './asp-icons/asp-icons.js';
 import { afterNextRender } from '@polymer/polymer/lib/utils/render-status.js';
-import '@polymer/iron-icon';
-import '@polymer/iron-icons'
+
+import '@polymer/iron-icons';
+import '@polymer/iron-icon/iron-icon.js';
+
+import './asp-icons/asp-icons.js';
+
 /**
  * `aspen-toggle` This component toggles between two  icons whenever the user taps on it.
  *
