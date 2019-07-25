@@ -1,7 +1,7 @@
 {
   "description": "This component toggles between two  icons whenever the user taps on it. ",
-  "name": "@polymer/aspen-toggle",
-  "version": "",
+  "name": "@aspen-elements/aspen-toggle",
+  "version": "0.5.0",
   "resolutions": {
     "inherits": "2.0.3",
     "samsam": "1.1.3",
@@ -29,5 +29,24 @@
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "wct-mocha": "^1.0.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aspen-elements/aspen-toggle.git"
+  },
+  "keywords": [
+    "web-components",
+    "aspen",
+    "aspen-elements",
+    "toggle"
+  ],
+  "author": "Mark Fortner, Ishan Subedi, Marko Ignjatovic, Suyash Adhikary",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/aspen-elements/aspen-toggle/issues"
+  },
+  "homepage": "https://github.com/aspen-elements/aspen-toggle#readme"
 }

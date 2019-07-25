@@ -1,40 +1,47 @@
 <!doctype html>
-<html lang="en">
+<!--
+@license
+Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-
-  <title>test-all test</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>shop-cart</title>
 
   <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-  <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
-  <script src="../node_modules/mocha/mocha.js"></script>
   <script src="../node_modules/chai/chai.js"></script>
+  <script src="../node_modules/mocha/mocha.js"></script>
   <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
-
-  <script type="module" src="./../aspen-toggle.js"></script>
 </head>
 
 <body>
 
-
-
-  <test-fixture id="ChangedPropertyTestFixture">
+  <test-fixture id="basic">
     <template>
-      <aspen-toggle prop1="new-prop"> </aspen-toggle>
+      <aspen-toggle prop1="hello"></aspen-toggle>
     </template>
   </test-fixture>
 
   <script type="module">
-    suite('aspen-toggle', () => {
+    import '../node_modules/@polymer/test-fixture';
+    import './../aspen-toggle.js';
 
-      test('setting a property on the element works', () => {
-        // Create a test fixture
-        const element = fixture('ChangedPropertyTestFixture');
-        assert.equal(element.prop1, 'new-prop');
-        const elementShadowRoot = element.shadowRoot;
 
+    suite('aspen-toggle test', function () {
+
+      test('test', function (done) {
+        const element = fixture('basic');
+        // assert.equal(element.prop1, 'hello');
+
+        assert.ok(element)
+        done()
       });
 
     });
