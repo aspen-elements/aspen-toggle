@@ -1,7 +1,7 @@
 {
   "description": "This component toggles between two  icons whenever the user taps on it. ",
   "name": "@aspen-elements/aspen-toggle",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "resolutions": {
     "inherits": "2.0.3",
     "samsam": "1.1.3",
