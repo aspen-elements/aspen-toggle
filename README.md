@@ -1,4 +1,4 @@
-# \<aspen-toggle\>
+#<aspen-toggle\>
 
 This component toggles between two  icons whenever the user taps on it. 
 
