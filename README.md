@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#<aspen-toggle\>
-=======
 # <aspen-toggle\>
->>>>>>> c3403f816a0c6d92031d57d4b49b8c7ae6acc7a1
 
 This component toggles between two  icons whenever the user taps on it. 
 
