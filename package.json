@@ -28,7 +28,7 @@
     "wct-browser-legacy": "^1.0.1",
     "@polymer/test-fixture": "^4.0.2",
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "wct-mocha": "^1.0.1"
   },
   "directories": {
